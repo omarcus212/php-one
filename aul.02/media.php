@@ -4,7 +4,7 @@
 
 
 
-if(isset($_POST["btncalc"])){
+if(isset($_POST["btncalc"])){   //calcular depois que o botão for clicked//
 
 $nota1=(double)0;
 $nota2=(double)0;
@@ -21,8 +21,26 @@ $nota4 = $_POST["txtn4"];
 $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4)/4;
   
 
+}else{     //deixando as variaveis em branco caso o butão não tenha sido clicked//
+    $nota1=null; 
+    $nota2=null; 
+    $nota3=null;  
+    $nota4=null; 
+    $totalmedia=null;
 }
 
+
+
+
+
+if(isset($_POST["media.php"])){     //zerar as variaveis para uma novo calculo//
+
+    $nota1=null; 
+    $nota2=null; 
+    $nota3=null;  
+    $nota4=null; 
+    $totalmedia=null;
+}
 
 
 
@@ -67,7 +85,7 @@ $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4)/4;
                         <input type="submit" name="btncalc" value ="Calcular" >
                         <div id="botaoReset">
                             <a href="media.php">
-                                Novo Cálculo
+                                Novo Cálculo   
                             </a>    
                         </div>
                     </div>
